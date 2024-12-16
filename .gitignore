@@ -1,0 +1,14 @@
+# Pasta do ambiente virtual
+airflow_venv/
+
+# Pasta do spark
+spark-3.5.3-bin-hadoop3/ 
+
+# Arquivos temporários
+*.log
+*.tmp
+
+__pycache__/   # Cache de Python
+logs/          # Logs de execução
+temp/          # Pastas temporárias
+
