@@ -13,8 +13,6 @@ def executar_spark(path_pyspark):
 
         print(path_pyspark)
         print(os.path.join(base_path, path_pyspark))
-        python_path = "/home/milamatos/Área de trabalho/pipeline/airflow_venv/bin/python"
-        #submit_path = os.path.join(base_path, path_pyspark)
 
         spark_submit_command = f"""
         export AWS_ACCESS_KEY_ID={aws_access_key};
@@ -23,8 +21,6 @@ def executar_spark(path_pyspark):
         --conf spark.hadoop.fs.s3a.aws.credentials.provider=com.amazonaws.auth.DefaultAWSCredentialsProviderChain \
         --conf spark.hadoop.fs.s3a.endpoint=s3.amazonaws.com \
         --conf spark.hadoop.fs.s3a.region=us-east-1 \
-        --conf spark.pyspark.python="{python_path}" \
-        --conf spark.pyspark.driver.python="{python_path}" \
         "{os.path.join(base_path,path_pyspark)}"
         """
 
