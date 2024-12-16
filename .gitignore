@@ -8,7 +8,7 @@ spark-3.5.3-bin-hadoop3/
 *.log
 *.tmp
 
-__pycache__/   # Cache de Python
-logs/          # Logs de execução
-temp/          # Pastas temporárias
+# Cache de Python
+dags/__pycache__/    
+
 
